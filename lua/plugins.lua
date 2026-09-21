@@ -22,7 +22,7 @@ require 'kickstart.plugins.treesitter'
 --  Uncomment any of the lines below to enable them (you will need to restart nvim).
 --
 -- require 'kickstart.plugins.debug'
--- require 'kickstart.plugins.indent_line' -- snacks.indent covers this
+-- require 'kickstart.plugins.indent_line'
 require 'kickstart.plugins.lint'
 require 'kickstart.plugins.autopairs'
 -- require 'kickstart.plugins.neo-tree'
@@ -31,7 +31,6 @@ require 'kickstart.plugins.autopairs'
 -- because `vim.pack` has no load priority: order here is the load order, and
 -- the colorscheme must apply after the plugins that theme against it.
 require 'custom.plugins.catppuccin'
-require 'custom.plugins.snacks'
 require 'custom.plugins.chezmoi'
 require 'custom.plugins.render-markdown'
 require 'custom.plugins.undotree'
