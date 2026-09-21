@@ -3,7 +3,7 @@
 require 'kickstart.plugins.guess-indent'
 require 'kickstart.plugins.gitsigns'
 require 'kickstart.plugins.which-key'
-require 'kickstart.plugins.tokyonight'
+-- require 'kickstart.plugins.tokyonight' -- replaced by custom.plugins.catppuccin
 require 'kickstart.plugins.todo-comments'
 require 'kickstart.plugins.mini'
 require 'kickstart.plugins.telescope'
@@ -22,23 +22,18 @@ require 'kickstart.plugins.treesitter'
 --  Uncomment any of the lines below to enable them (you will need to restart nvim).
 --
 -- require 'kickstart.plugins.debug'
--- require 'kickstart.plugins.indent_line'
--- require 'kickstart.plugins.lint'
--- require 'kickstart.plugins.autopairs'
+-- require 'kickstart.plugins.indent_line' -- snacks.indent covers this
+require 'kickstart.plugins.lint'
+require 'kickstart.plugins.autopairs'
 -- require 'kickstart.plugins.neo-tree'
 
--- NOTE: You can add your own plugins, configuration, etc. in `lua/custom/plugins/*.lua`.
---
--- For independent modules, uncomment the convenience loader:
--- require 'custom.plugins'
---
--- `custom.plugins` automatically loads files from that directory, but their
--- order is unspecified. If plugins depend on each other, keep them in the same
--- file and put their `vim.pack.add()` and `setup()` calls in the required order.
---
--- If separate modules need a specific order, require them explicitly instead:
--- require 'custom.plugins.colorscheme'
--- require 'custom.plugins.ui'
--- require 'custom.plugins.git'
+-- Own plugins. Required explicitly rather than via `require 'custom.plugins'`
+-- because `vim.pack` has no load priority: order here is the load order, and
+-- the colorscheme must apply after the plugins that theme against it.
+require 'custom.plugins.catppuccin'
+require 'custom.plugins.snacks'
+require 'custom.plugins.chezmoi'
+require 'custom.plugins.render-markdown'
+require 'custom.plugins.undotree'
 
 -- vim: ts=2 sts=2 sw=2 et
