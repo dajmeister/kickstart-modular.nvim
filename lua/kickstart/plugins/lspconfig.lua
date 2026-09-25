@@ -116,6 +116,9 @@ local servers = {
 
   stylua = {}, -- Used to format Lua code
 
+  ruff = {}, -- Python linter + formatter
+  ty = {}, -- Python type checker
+
   -- Special Lua Config, as recommended by neovim help docs
   lua_ls = {
     on_init = function(client)
